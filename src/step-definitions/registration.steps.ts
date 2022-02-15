@@ -37,7 +37,7 @@ When('{pronoun} register using the following particulars', async (actor: Actor,t
  *  see: https://serenity-js.org/modules/core/function/index.html#static-function-actorCalled
  *  see: https://serenity-js.org/modules/core/function/index.html#static-function-actorInTheSpotlight
  */
-Then(/.* should see that .* registration has succeeded/, async () =>
+Then(/.* should see that registration has succeeded/, async () =>
     await actorInTheSpotlight().attemptsTo(
        VerifyRegistration.succeeded()
     )

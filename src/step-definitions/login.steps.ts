@@ -1,12 +1,11 @@
 import { DataTable, Given, Then, When } from "@cucumber/cucumber";
-import { Ensure, equals } from "@serenity-js/assertions";
-import { Actor, actorInTheSpotlight, Check } from "@serenity-js/core";
-import { isVisible, Navigate } from "@serenity-js/webdriverio";
+import { Actor, Check } from "@serenity-js/core";
+import { isVisible } from "@serenity-js/webdriverio";
 import { LoginForm } from "../page-objects/LoginForm";
 import { Login } from "../tasks/Login";
 import { Registration } from "../tasks/Registration";
 import { VerifyLogin } from "../tasks/VerifyLogin";
-import { VerifyRegistration } from "../tasks/VerifyRegistration";
+
 
 /**
  * Below step definitions use Cucumber Expressions
@@ -39,7 +38,7 @@ When('{pronoun} login', async (actor: Actor, table: DataTable) => {
 })
 
 Then(
-  '{pronoun} should see that his login has succeeded',
+  '{pronoun} should see that login has succeeded',
   async (actor: Actor) =>
     await actor.attemptsTo(
       VerifyLogin.succeeded("You're logged in with Vue + Vuex & JWT!!")

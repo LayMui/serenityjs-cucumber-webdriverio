@@ -6,12 +6,12 @@ Feature: Login
   Background:  
     Given John is at the login system
     And he has registered his account
-      | firstname | lastname | username | password      |
-      | John      | Ferguson | smart    | iloveblackcat |
+      | firstname | lastname | username    | password      |
+      | Jan       | Molak    | janmolak    | serenityjs    |
 @test
   Scenario Outline: Login with his account
     When he login 
-    | username | password      |
-    | smart    | iloveblackcat |
-    Then he should see that his login has succeeded
+    | username    | password    |
+    | janmolak    | serenityjs  |
+    Then he should see that login has succeeded
   

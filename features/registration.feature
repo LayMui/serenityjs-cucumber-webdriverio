@@ -5,10 +5,10 @@ Feature: Registration
   
   Background:
     Given John is at the login system
-
+@test
   Scenario Outline: Register with an account
     When he register using the following particulars
     | firstname | lastname | username | password      |
-    | John      | Ferguson | smart    | iloveblackcat |
-    Then he should see that his registration has succeeded
+    | John      | Ferguson | john     | iloveblackcat |
+    Then he should see that registration has succeeded
   

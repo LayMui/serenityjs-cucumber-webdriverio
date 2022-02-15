@@ -7,3 +7,5 @@ brew install chromedriver
 sudo xattr -r -d com.apple.quarantine /usr/local/bin
 chromedriver
 ```
+
+yarn upgrade --latest
