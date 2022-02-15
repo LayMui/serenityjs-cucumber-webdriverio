@@ -14,7 +14,7 @@ import { VerifyLogin } from "../tasks/VerifyLogin";
  * {actor} and {pronoun} are custom expressions defined under support/parameters.ts
  */
 Given(
-  '{pronoun} has registered his account',
+  '{actor} has registered',
   async (actor: Actor, table: DataTable) => {
        const firstname = table.hashes()[0].firstname
        const lastname = table.hashes()[0].lastname

@@ -5,7 +5,7 @@ Feature: Registration
   
   Background:
     Given John is at the login system
-@test
+
   Scenario Outline: Register with an account
     When he register using the following particulars
     | firstname | lastname | username | password      |
