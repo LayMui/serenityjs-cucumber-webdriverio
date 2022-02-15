@@ -1,6 +1,6 @@
 import { DataTable, Given, Then, When } from "@cucumber/cucumber";
 import { Actor, Check } from "@serenity-js/core";
-import { isVisible } from "@serenity-js/webdriverio";
+import { isVisible, Navigate } from "@serenity-js/webdriverio";
 import { LoginForm } from "../page-objects/LoginForm";
 import { Login } from "../tasks/Login";
 import { Registration } from "../tasks/Registration";
@@ -22,10 +22,8 @@ Given(
        const password = table.hashes()[0].password
 
     await actor.attemptsTo(
-      Check.whether(LoginForm.registerButton(), isVisible()).andIfSo(
-            Registration.using(firstname, lastname, username, password)
-        )
-        )
+      Navigate.to('https://laymui-login-project.vercel.app/'),
+        Registration.using(firstname, lastname, username, password))
     }
 )
 
